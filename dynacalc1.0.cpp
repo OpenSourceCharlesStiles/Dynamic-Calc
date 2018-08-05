@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 
 using namespace std;
 
@@ -41,16 +42,16 @@ int main()
 
                 cout << num1 << " multiplied by " << num2 << " is equal to : " << result << ".\n";
             }
+
+
+        if(userInput == "-")
+        {
+            cout << "please enter second value and press enter: ";
+            cin >> num2;
+
+            result = num1 - num2;
+
+            cout << num1 << " minus " << num2 << " is equal to : " << result << ".\n";
+            }
         }
-
-    if(userInput == "-")
-    {
-        cout << "please enter second value and press enter: ";
-        cin >> num2;
-
-        result = num1 - num2;
-
-        cout << num1 << " minus " << num2 << " is equal to : " << result << ".\n";
-        }
-
     }
