@@ -2,7 +2,7 @@
 #include<string>
 
 using namespace std;
-
+void newCalc();
 float num1, num2, result;
 
 string userInput;
@@ -36,13 +36,25 @@ int main()
 
     if(userInput!= "+" && userInput!= "-" && userInput!= "*" && userInput!= "/")
         {
-        cerr << "invalid input";
+        cerr << "invalid input" <<endl;
+	newCalc();
         }
 
     else
         {
-        cout << num1 << userInput << num2 << " equals: " << result << ".\n";
+        cout << num1 << userInput << num2 << " equals: " << result << endl;
+	newCalc();
         }
 
     return 0;
     }
+void newCalc()
+{
+    char newOption;
+    cout << "Do you to make a new calculation? (y/n) " <<endl;
+    cin >> newOption;
+    if(newOption == 'y' || newOption == 'Y')
+	main();
+    else
+	return;
+}
